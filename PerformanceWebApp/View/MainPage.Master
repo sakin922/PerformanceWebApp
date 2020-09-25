@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MainPage.master.cs" Inherits="PerformanceWebApp.View.MainPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>广州泛亚绩效考核</title>
+    <asp:ContentPlaceHolder ID="CPHHead1" runat="server">
+        <style type="text/css">
+            .form {
+                width: 1200px;
+                margin-left: 300px;
+            }
+
+            .CPHolder1 {
+                font-family: 'Microsoft YaHei UI';
+                font-weight: bolder;
+                font-size: medium;
+            }
+
+            .lbtnReLogin {
+                margin-left: 270px;
+                color: red
+            }
+
+            .labelmargin {
+                margin-left: 10px;
+                margin-right: 20px;
+            }
+        </style>
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" class="form">
+        <div class="CPHolder1">
+            <asp:ContentPlaceHolder ID="CPHolder1" runat="server">
+                <span>部门</span>
+                <asp:Label ID="labDepartment" runat="server" CssClass="labelmargin"></asp:Label>
+                <span>职务</span>
+                <asp:Label ID="labPost" runat="server" CssClass="labelmargin"></asp:Label>
+                <span>编号</span>
+                <asp:Label ID="labAccount" runat="server" CssClass="labelmargin"></asp:Label>
+                <span>姓名</span>
+                <asp:Label ID="labEmName" runat="server" CssClass="labelmargin"></asp:Label>
+                <span>复核人</span>
+                <asp:Label ID="labExamer" runat="server" CssClass="labelmargin"></asp:Label>
+                <asp:LinkButton ID="lbtnReLogin" runat="server" OnClick="lbtnReLogin_Click" CssClass="lbtnReLogin">注销</asp:LinkButton>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
